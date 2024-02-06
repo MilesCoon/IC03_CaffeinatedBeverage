@@ -72,5 +72,15 @@ public class Main {
     }
 
     // TO-DO: Method that finds the highest price drink
-
+    public static EnergyDrink findHPED(CaffeinatedBeverage[] order, int count) {
+        EnergyDrink maxDrink = null;
+        double maxPrice = Double.MIN_VALUE;
+        for (int i = 0; i < count; i++) {
+            if (order[i] instanceof EnergyDrink == true && order[i].getPrice() > maxPrice) {
+                maxPrice = order[i].getPrice();
+                maxDrink = (EnergyDrink)order[i];
+            }
+        }
+        return maxDrink;
+    }
 }
