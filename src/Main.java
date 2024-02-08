@@ -59,6 +59,11 @@ public class Main {
 
         } while(choice != 3);
         // while = "keep looping as long as this is true"
+        double avgPrice = findAveragePrice(order, count);
+        EnergyDrink maxDrink = findHPED(order, count);
+
+        System.out.println("The average price of the drinks in your order is: " + avgPrice +
+                " and the highest priced Energy Drink is " + maxDrink);
     }
 
     public static double findAveragePrice(CaffeinatedBeverage[] inventory, int count) {
@@ -71,14 +76,14 @@ public class Main {
         return total/count;
     }
 
-    // TO-DO: Method that finds the highest price drink
-    public static EnergyDrink findHPED(CaffeinatedBeverage[] order, int count) {
+    // TO-DO:
+    public static EnergyDrink findHPED(CaffeinatedBeverage[] inventory, int count) {
         EnergyDrink maxDrink = null;
         double maxPrice = Double.MIN_VALUE;
         for (int i = 0; i < count; i++) {
-            if (order[i] instanceof EnergyDrink == true && order[i].getPrice() > maxPrice) {
-                maxPrice = order[i].getPrice();
-                maxDrink = (EnergyDrink)order[i];
+            if (inventory[i] instanceof EnergyDrink == true && inventory[i].getPrice() > maxPrice) {
+                maxPrice = inventory[i].getPrice();
+                maxDrink = (EnergyDrink)inventory[i];
             }
         }
         return maxDrink;
