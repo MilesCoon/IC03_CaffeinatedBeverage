@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da6b308f-9fd9-40f3-a004-2ec9485d9bee" name="Changes" comment="Day 1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="da6b308f-9fd9-40f3-a004-2ec9485d9bee" name="Changes" comment="Minor changes, need to add NumberFormat for currency &amp; fix EnergyDrink being printed as null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnergyDrink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnergyDrink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,11 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706859578214</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Minor changes, need to add NumberFormat for currency &amp; fix EnergyDrink being printed as null">
+      <option name="closed" value="true" />
+      <created>1707384601809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707384601809</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Day 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 1" />
+    <MESSAGE value="Added findHPED() method" />
+    <MESSAGE value="Minor changes, need to add NumberFormat for currency &amp; fix EnergyDrink being printed as null" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes, need to add NumberFormat for currency &amp; fix EnergyDrink being printed as null" />
   </component>
 </project>

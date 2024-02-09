@@ -11,6 +11,10 @@ public class EnergyDrink extends CaffeinatedBeverage {
         this.flavor = flavor;
     }
 
+    public EnergyDrink() {
+        this("NA", 0, 0.0, "NA");
+    }
+
     // Getter and Setter
     public String getFlavor() { return flavor; }
     public void setFlavor(String flavor) { this.flavor = flavor; }
@@ -36,8 +40,8 @@ public class EnergyDrink extends CaffeinatedBeverage {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return "EnergyDrink: " +
                 name + ", " +
-                ounces + "oz, " +
-                flavor + "' " +
+                ounces + " oz, " +
+                flavor + ", " +
                 currency.format(price);
     }
 }

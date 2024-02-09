@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -5,6 +6,8 @@ public class Main {
         Scanner keyboard = new Scanner(System.in);
         // Creates array that stores both Coffee and EnergyDrink
         CaffeinatedBeverage[] order = new CaffeinatedBeverage[10];
+
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
 
         int choice, ounces, count=0;
         String name, flavor, roastType;
@@ -50,7 +53,7 @@ public class Main {
                     // Create a new EnergyDrink object
                     // Put it into the array
                     // Count goes up by 1
-                    order[count++] = new Coffee(name, ounces, price, flavor);
+                    order[count++] = new EnergyDrink(name, ounces, price, flavor);
                     break;
                 case 3: // Check Out
                     break;
@@ -60,10 +63,10 @@ public class Main {
         } while(choice != 3);
         // while = "keep looping as long as this is true"
         double avgPrice = findAveragePrice(order, count);
-        EnergyDrink maxDrink = findHPED(order, count);
+        EnergyDrink HPED = findHPED(order, count);
 
-        System.out.println("The average price of the drinks in your order is: " + avgPrice +
-                " and the highest priced Energy Drink is " + maxDrink);
+        System.out.println("The average price of the drinks in your order is: " + currency.format(avgPrice) +
+                " and the highest priced Energy Drink is " + HPED);
     }
 
     public static double findAveragePrice(CaffeinatedBeverage[] inventory, int count) {
@@ -76,12 +79,11 @@ public class Main {
         return total/count;
     }
 
-    // TO-DO:
     public static EnergyDrink findHPED(CaffeinatedBeverage[] inventory, int count) {
-        EnergyDrink maxDrink = null;
+        EnergyDrink maxDrink = new EnergyDrink();
         double maxPrice = Double.MIN_VALUE;
         for (int i = 0; i < count; i++) {
-            if (inventory[i] instanceof EnergyDrink == true && inventory[i].getPrice() > maxPrice) {
+            if (inventory[i] instanceof EnergyDrink && inventory[i].getPrice() > maxPrice) {
                 maxPrice = inventory[i].getPrice();
                 maxDrink = (EnergyDrink)inventory[i];
             }
